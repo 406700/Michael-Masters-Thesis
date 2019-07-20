@@ -7,6 +7,13 @@
 \usepackage{wrapfig}
 \usepackage{amsmath}
 \usepackage{subcaption}
+\usepackage{siunitx}
+\sisetup{
+  inter-unit-product=\ensuremath{{\cdot}},
+%  tight-spacing=true,
+}
+%\sisetup{inter-unit-product =$\cdot$}
+\usepackage{upgreek}
 
 \input{docsetup.tex}
 
@@ -24,15 +31,16 @@
 
 %% PART 3 -- The Chapters
 %\input{chapter1.tex}		%% Edit each chapter
-\input{overview.tex}
+%\input{overview.tex}
 \input{chapter2.tex}
 \input{chapter3.tex}
 \input{chapter4.tex}
 \input{chapter5.tex}
 \input{chapter6.tex}
-
+\input{chapter7.tex}
+\input{chapter8.tex}
 %% PART 4
 \input{references.tex}	%% Edit your references in "mylib.bib"
-\input{appendix.tex}		%% Optional
+%\input{appendix.tex}		%% Optional
 
 \end{document}

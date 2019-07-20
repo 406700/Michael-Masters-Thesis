@@ -6,7 +6,7 @@
     
     The four-probe technique is a method that allows for sensitive resistivity measurements by eliminating the resistance of the measurement probes and contacts from a measurement. In a two point resistivity measurement the resistance is the sum of the resistance of the leads, the resistance of the contacts and the resistance of the sample. %[current spreading etc, semicondutor devices]
     When the resistance of the leads and contacts becomes comparable to the sample resistance the method is no longer useful for accurately determining the resistance. The four-probe methods uses four contacts to the sample; two probes supply current to the sample and the voltage is measured across the remaining two probes. In the ideal case, due to their high impedance, no current flows through the voltage probes eliminating any contribution to the resistance due to the contacts and leads. Typical four-probes are designed to measure semiconductor wafers and thin films and consist of four co-linear Tungsten probes with constant spacing. While other geometries are possible %[citations]
-    we will now consider this geometry for the rest of the text, unless otherwise specified. 
+    we will now consider this geometry for the following derivations. 
     
  \section{Sample Geometry}
  
@@ -17,33 +17,38 @@
         R = \frac{V}{I}
     \end{equation}
     
-    In order to determine the resistivity of the sample, the geometry of the sample, and size and placement of the contacts must be known as these define the current paths within the sample. There are many papers that 
+    In order to determine the resistivity of the sample, the geometry of the sample, and size and placement of the contacts must be known as these define the current paths within the sample. 
     
-    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{fig/4pp/4pp_current.png}
+        \caption{\cite{Miccoli2015TheSystems}}
+        \label{fig:4ppcurret}
+    \end{figure}
     For the case of the co-linear four point probe and a homogeneous sample, we can define the resistivity $\rho$ as:
     
     \begin{equation}
-    \rho = G * \frac{V_{2-3}}{I_{1-4}}
+    \rho = F\frac{V_{2-3}}{I_{1-4}}
     \end{equation}
-    where G is a correction factor that depends on the geometry of the sample and, the position of the contacts and their spacing. Where the subscript denotes the probe numbers, e.g. $V_{2-3}$ refers to the voltage between probes 2 and 3. For special cases the correction factor can be easily calculated. 
-    %Semi infinite volume
+    where F is a correction factor that depends on the geometry of the sample and, the position of the contacts and their spacing \cite{Miccoli2015TheSystems}. Where the subscript denotes the probe numbers, e.g. $V_{2-3}$ refers to the voltage between probes 2 and 3. There are many works that derive the correction factor F for different sample geometries, thicknesses and probe positions \cite{Smits} \cite{ValdestResistivityTransistors} \cite{Topsoe1991GeometricCorrection} \cite{}. These solutions are found by using the method of images \cite{ValdestResistivityTransistors}, solving Laplace's equation \cite{Esposito2000DeterminationCrystals} and finite element methods \cite{Zimney2007CorrectionStudy} among others. 
+    
+    The simple cases of a semi-infinite volume and thin infinite sheet are solved without the use of boundary conditions by looking at the geometry of the current as it spreads into the sample. For a bulk specimen, infinite in all directions below a plane, the current will spread out from the source probes in hemispherical shells of equal current density \cite{Miccoli2015TheSystems}.
+    The current density is given by $J=\frac{I}{2 \pi r^2_1}$ where $r_1$ is the radial distance from a source electrode. The electric field at this point is then given by:
     \begin{equation}
-        \rho = 2 \pi s * \frac{V}{I} 
+    E(r_1) = \rho J = \frac{\rho I}{2 \pi r^2}=\frac{-dV}{dr}
     \end{equation}
-    where s is the probe spacing.
-    %Thick Sample 
+    Integrating both sides leads to an expression for the potential at this point. The measured potential can then by found by the difference in potential at the positions of the two inner probes. For the case of equidistant probes this gives the following expression:
     \begin{equation}
-        \rho = 2 \pi s *T_1 (\frac{t}{s})* \frac {V}{I} 
+        \rho = 2 \pi s\frac{V}{I}
     \end{equation}
     
-    
-    %Thin Sample
+    For a 2D sheet of thickness $t \ll s$, current is confined in the direction normal to the plane and the current flow can by approximated by cylindrical shells with current density $J=2 \pi rt$. As the probe distance increases the number of possible current paths increases and directly cancels any increase in resistivity from the larger probe spacing, thus the resistance is independent of spacing and the resistivity is given by: 
     \begin{equation}
-        \rho = \frac{\pi}{\ln{2}} * t *T_2 (\frac{t}{s}) * \frac{V}{I}
+        \rho = \frac{\pi t}{ln2}\frac{V}{I}
     \end{equation}
-    where t is the thickness and $T_2 (\frac{t}{s})$ is a correction factor for when $(\frac{t}{s})$ is not much less than 1. For t = s the correction factor is $7.16 \%$
-    
-    
+  
+  ...corrections for thickness on wafers...
+  
     %correction for semicircular shape
     %correction for 
 \section{Finite Size Contacts}
@@ -57,10 +62,9 @@
  \caption{Schematic of the co-linear 4-probe configuration with electrodes that span the width of the specimen. Figure and caption reprinted from \cite{Zimney2007CorrectionStudy}.}
 \label{fig1}
 \end{figure}
+
+ Several theoretical and experimental studies have been done on the influence of finite size contacts for co-linear resistivity measurement \cite{Zimney2007CorrectionStudy}, \cite{Mak1989SpecificArsenide}, \cite{Ilse2014GeometricalMeasurements} \cite{Esposito2000DeterminationCrystals}. Zimney et al. and Mak et al. focus on rectangular contact bars and are most relevant for this analyses. Zimney et al has used finite element studies to investigate the influence of rectangular contacts spanning the width of a sample as shown in figure \ref{fig1}. These results may be applied to this work under the approximation that the semicircular fiber core cross section is rectangular. In this paper it is assumed that the resistivity of the contacts is much lower than the sample (the contacts are equipotential), the sample is homogeneous and that the interface resistivity is ohmic.%talk about what defines interface resistivity. ohmic nonohmic elements. 
  
-   
- 
- Several theoretical and experimental studies have been done on the influence of finite size contacts for co-linear resistivity measurement \cite{Zimney2007CorrectionStudy}, \cite{Mak1989SpecificArsenide}, \cite{Ilse2014GeometricalMeasurements}. Zimney et al. and Mak et al. focus on rectangular contact bars and are most relevant for this analyses. Zimney et al has used finite element studies to investigate the influence of rectangular contacts spanning the width of a sample as shown in figure \ref{fig1}. These results may be applied to this work under the approximation that the semicircular fiber core cross section is rectangular. In this paper it is assumed that the resistivity of the contacts is much lower than the sample (the contacts are equipotential), the sample is homogeneous and that the interface resistivity is ohmic.  %talk about what defines interface resistivity. ohmic nonohmic elements. 
  \begin{table}[b]
 \begin{center}
     \begin{tabular}{|l|l|l|  }
@@ -78,10 +82,13 @@
  
 As the contacts span the sample width there is no current flow in the y direction \ref{fig1} and the analysis is equivalent to the two dimensional system. Several dimensionless variables describe the the geometry and are found in Table \ref{Tab1}. The contact spacing $s$ is defined as the distance between the inner edges of the voltage sensing contacts. $R_m$ is the measured 4 terminal resistivity, $R_c$ is the interface resistance and $\Delta$ is the contact width. 
 
-For the given geometry the resistivity is given by the following relation: \begin{equation}
-    \rho   = F \frac{wt}{s}R_m = F \frac{wt}{s}\frac{V_m}{I_m}
-\end{equation} where F is a correction factor accounting for any perturbation in the current distribution due to the influence of sample thickness and presence of contacts, and the subscript m signifies a measured value. Due to the definition of s is the distance between inner edges of the contact pads, F will not be equal to 1 for the case of a uniform current distribution. This is because the measured voltage will not be the voltage at the edge of the contact, e.g for $ER = 1$, $F = .5$.
+For the given geometry the resistivity is given by the following relation: 
+\begin{equation}
+    \rho   = F \frac{wt}{s}R_m = F \frac{wt}{s}\frac{V_{2-3}}{I_{1-4}}
+\end{equation} 
+where F is a correction factor accounting for any perturbation in the current distribution due to the influence of sample thickness and presence of contacts. Due to the definition of s is the distance between inner edges of the contact pads, F will not be equal to 1 for the case of a uniform current distribution. This is because the measured voltage will not be the voltage at the edge of the contact, e.g for $ER = 1$, $F = .5$.
 
+%The correction Factor F for this geometry is solved by \cite{Esposito2000DeterminationCrystals}, for the condition of no influence of the contacts by solving Laplace's equation considering appropriate boundary conditions at the contact sample interfaces. 
 
  
  \begin{figure}[]
@@ -102,15 +109,18 @@ and the the spacing is measured from the center of the contact, and the second c
 %what is important: order of magnitude of contact resistivity. How the correction factor changes. h
 %$L = 3s + 4\Delta$
 
-Figure \ref{ER1} a plots F against TR for the limiting cases of high and low contact resistivity ($\alpha = 0$ and $\alpha >> 1$ and with $ER = 1$ . This shows that the thickness of the 
-
-
-\begin{figure}[htb]
+\begin{figure}[t]
   \centering
     \includegraphics[width=\textwidth]{fig/4pp/ER1.png}
  \caption{  Figure and caption adapted from \cite{Zimney2007CorrectionStudy}.}
  \label{ER1}
 \end{figure}
+
+
+Figure \ref{ER1} a plots F against TR for the limiting cases of high and low contact resistivity ($\alpha = 0$ and $\alpha >> 1$ and with $ER = 1$ . The contour plots illustrate the potential field and current distribution (arrows) in the sample. The blue dashed line is an analytical solution derived in \cite{} for the case of high interface resistance. First looking at the case of high interface resistivity, where we only see the effects of thickness, we see F remains constant until $TR \sim 2$ where it begins to fall off sharply. This is explained by the current density no longer being constant throughout the thickness of the sample. When the thickness becomes large the current is confined to an area near the surface of the sample as illustrated in the \ref{ER1}(b), thus an increasing thickness causes a reduction in F. 
+We see that for $\alpha = 0$ F approaches 1 for decreasing Thickness. We see that as the TR decreases the equipotential created by the pads will have a greater influence through the depth of the sample until the electrodes become a short circuit to the sample. Larger electrodes will have a greater effect on the sample and thus the area where the cases converge will be shifted to higher values of TR. 
+
+In this work it is important to know the point of divergence as the interface resistivity is in general an unknown. Using information on the typical core diameters of the measured fibers and the resolution of the lithography we can find the regime in which we need to worry about the correction factors. A fiber cross section will have a small area compared to a rectangular bar, and thus the current will probe a larger volume and the point where F begins to fall off will be shifted to higher values of TR. Assuming an ER of 1, we can safely achieve a $\Delta$ of $20\si{\micro\meter}$ with the MLA using MAN-440. Fiber cores in the study range from  $10-160 \si{\micro\meter}$ This gives a TR between $0.5$ and $8$ which for a rectangular cross section is in the regime where the correction begins to become significant. Thus especially for the thinner fiber cores care must be taken to ensure a sufficiently larger ER, and measured values must be treated with caution until a further analysis of the effects of a semicircular fiber cross section is performed.  
 
 
 \cleardoublepage
