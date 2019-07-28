@@ -1,11 +1,11 @@
 %===================================== CHAP 4 =================================
 
-\chapter{Four Point Probe}
+\chapter{Four Point Probe Measurements}
 
     %intro to resistivity 
     
-    The four-probe technique is a method that allows for sensitive resistivity measurements by eliminating the resistance of the measurement probes and contacts from a measurement. In a two point resistivity measurement the resistance is the sum of the resistance of the leads, the resistance of the contacts and the resistance of the sample. %[current spreading etc, semicondutor devices]
-    When the resistance of the leads and contacts becomes comparable to the sample resistance the method is no longer useful for accurately determining the resistance. The four-probe methods uses four contacts to the sample; two probes supply current to the sample and the voltage is measured across the remaining two probes. In the ideal case, due to their high impedance, no current flows through the voltage probes eliminating any contribution to the resistance due to the contacts and leads. Typical four-probes are designed to measure semiconductor wafers and thin films and consist of four co-linear Tungsten probes with constant spacing. While other geometries are possible %[citations]
+    The four-probe technique is a method that allows for sensitive resistivity measurements by eliminating the resistance of the measurement probes and contacts. In a two point resistivity measurement the resistance is the sum of the resistance of the leads, the resistance of the contacts and the resistance of the sample. %[current spreading etc, semicondutor devices]
+    When the resistance of the leads and contacts becomes comparable to the sample resistance the method is no longer useful for accurately determining the resistance. The four-probe methods uses four contacts to the sample, two probes supply current to the sample and the voltage is measured across the remaining two probes. In the ideal case, due to their high impedance, no current flows through the voltage probes eliminating any contribution to the resistance due to the contacts and leads. Typical four-probes are designed to measure semiconductor wafers and thin films and consist of four co-linear Tungsten probes with constant spacing. While other geometries are possible %[citations]
     we will now consider this geometry for the following derivations. 
     
  \section{Sample Geometry}
@@ -47,10 +47,32 @@
         \rho = \frac{\pi t}{ln2}\frac{V}{I}
     \end{equation}
   
-  ...corrections for thickness on wafers...
+  
+\subsection{Fiber Geometry}
+A Fiber with sufficiently large contact spacing can be treated as a wire. The resistivity of a wire is given by $\rho = \frac{L}{A}R$
+where L is the length of the wire and A is the cross sectional area. The length L is the center to center spacing of the voltage contacts for the ideal case of high interface resistivity. The cross sectional area $A_t$ of the fiber can be derived as follows: \begin{align}
+\Theta = \arccos{\frac{L}{D}}    \\
+h = \sqrt{r^2-\frac{1}{2}L^2} \\
+    A_t = \frac{\pi+2\Theta}{2\pi}*\pi r^2 + \frac{1}{2}Lh\\
+\end{align}    
+When the fiber is polished past the mid point the cross sectional area $A_b$ is given by: \begin{equation}
+    A_b = \pi r^2 -A_t
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.7\textwidth]{fig/polishing/fiberdiagram.jpg}
+    \caption{Symbols used in the calculation of a fiber cross section, where the shaded area represents the remaining fiber area. Both L and D are subject to measurement errors.}
+    \label{fig:fiber}
+\end{figure}
+\subsubsection{Errors in the Resistivity Calculation}
+In order to obtain accurate resistivity results the fiber ends were polished and the core diameter was measured through a calibrated optical microscope before the fibers were mounted in epoxy. This was necessary because the 
+fiber cross section varied slightly along the fiber, and for the case of hand drawn fibers and laser annealed fibers, this variation could be significant over short sections of fiber.  A computer program was written to calculate the sensitivity of the calculation to an error in the measured diameter of the fiber the chord (L in Figure \ref{fig:fiber}) and the measured contact spacing. Experimentally this measurement is performed in a calibrated optical microscope. 
+
   
     %correction for semicircular shape
     %correction for 
+    \FloatBarrier
 \section{Finite Size Contacts}
  The previous four point probe equations are derived for measurements made with ideal point like contacts and a high impedance voltmeter so that no current can flow through the contacts. In any real situation there will be a finite area of contact between the probe and the sample and finite interface resistance between the contacts and sample. This will allow current to flow into the contacts and will disturb the potential and current distributions in the sample \cite{Zimney2007CorrectionStudy}. With lithographically defined micro scale contacts this contact area may become large compared to the probe spacing, and the effects of the metal contacts must be considered. %here? 
  Two situations in this work required the use of small contact spacing. First is the occurrence of cracks with the fiber which limited the continuous length of fiber, and second is high resistivity fiber cores which require a small contact spacing in order to drive a measurable current through the sample without exceeding the voltage source range of the source meter unit. 
@@ -80,7 +102,7 @@
 \label{Tab1}
 \end{table}
  
-As the contacts span the sample width there is no current flow in the y direction \ref{fig1} and the analysis is equivalent to the two dimensional system. Several dimensionless variables describe the the geometry and are found in Table \ref{Tab1}. The contact spacing $s$ is defined as the distance between the inner edges of the voltage sensing contacts. $R_m$ is the measured 4 terminal resistivity, $R_c$ is the interface resistance and $\Delta$ is the contact width. 
+As the contacts span the sample width there is no current flow in the y direction (figure \ref{fig1}) and the analysis is equivalent to the two dimensional system. Several dimensionless variables describe the the geometry and are found in Table \ref{Tab1}. The contact spacing $s$ is defined as the distance between the inner edges of the voltage sensing contacts. $R_m$ is the measured 4 terminal resistivity, $R_c$ is the interface resistance and $\Delta$ is the contact width. 
 
 For the given geometry the resistivity is given by the following relation: 
 \begin{equation}
@@ -99,7 +121,7 @@ where F is a correction factor accounting for any perturbation in the current di
 \end{figure}
 
 
-Figure \ref{fig2} illustrates the change in potential for varying contact resistivity for the case of $ER$ and $TR$ equal to one. The left electrode is the current source, and the right electrode is the voltage sensing electrode. 
+Figure \ref{fig2} illustrates the change in potential for varying contact resistivity for the case of $ER$ and $TR$ equal to one. The image shows half of a four point measurement where the left electrode is a current source, and the right electrode is a voltage sensing electrode. 
 
 The influence of the contacts can be easily understood under two extremes of infinite or zero specific contact resistivity. With zero specific contact resistivity current will easily flow into the low resistivity contact pads, and the contact essentially short circuits the sample beneath. No potential drop occurs under the contact pad. With high specific contact resistivity, no current will flow through the contact, and the contact is isolated from the sample leaving the potential in the sample beneath unchanged \ref{fig1}(c). For intermediate values of contact resistivity a portion of the current will flow through the contact causing a potential drop across the contact-sample interface.
 With these considerations it is shown that it is non-trivial  to determine the contact spacing that corresponds to the position in the sample of the measured potential. In the first case the potential in the contacts will be an average of the potential beneath the contacts \cite{Zimney2007CorrectionStudy} %more here?
@@ -118,9 +140,8 @@ and the the spacing is measured from the center of the contact, and the second c
 
 
 Figure \ref{ER1} a plots F against TR for the limiting cases of high and low contact resistivity ($\alpha = 0$ and $\alpha >> 1$ and with $ER = 1$ . The contour plots illustrate the potential field and current distribution (arrows) in the sample. The blue dashed line is an analytical solution derived in \cite{} for the case of high interface resistance. First looking at the case of high interface resistivity, where we only see the effects of thickness, we see F remains constant until $TR \sim 2$ where it begins to fall off sharply. This is explained by the current density no longer being constant throughout the thickness of the sample. When the thickness becomes large the current is confined to an area near the surface of the sample as illustrated in the \ref{ER1}(b), thus an increasing thickness causes a reduction in F. 
-We see that for $\alpha = 0$ F approaches 1 for decreasing Thickness. We see that as the TR decreases the equipotential created by the pads will have a greater influence through the depth of the sample until the electrodes become a short circuit to the sample. Larger electrodes will have a greater effect on the sample and thus the area where the cases converge will be shifted to higher values of TR. 
+We see that for $\alpha = 0$ F approaches 1 for decreasing thickness. We see that as the TR decreases the equipotential created by the pads will have a greater influence through the depth of the sample until the electrodes become a short circuit to the sample. Larger electrodes will have a greater effect on the sample and thus the area where the cases converge will be shifted to higher values of TR. 
 
-In this work it is important to know the point of divergence as the interface resistivity is in general an unknown. Using information on the typical core diameters of the measured fibers and the resolution of the lithography we can find the regime in which we need to worry about the correction factors. A fiber cross section will have a small area compared to a rectangular bar, and thus the current will probe a larger volume and the point where F begins to fall off will be shifted to higher values of TR. Assuming an ER of 1, we can safely achieve a $\Delta$ of $20\si{\micro\meter}$ with the MLA using MAN-440. Fiber cores in the study range from  $10-160 \si{\micro\meter}$ This gives a TR between $0.5$ and $8$ which for a rectangular cross section is in the regime where the correction begins to become significant. Thus especially for the thinner fiber cores care must be taken to ensure a sufficiently larger ER, and measured values must be treated with caution until a further analysis of the effects of a semicircular fiber cross section is performed.  
-
+In this work it is important to know the point of divergence as the interface resistivity is in general an unknown. Using information on the typical core diameters of the measured fibers and the resolution of the lithography we can find the regime in which we need to worry about the correction factors. A fiber cross section will have a small area compared to a rectangular bar, and thus the current will be confined laterally and probe a larger depth; thus the point where F begins to fall off will be shifted to higher values of TR. Assuming an ER of 1, we can safely achieve a $\Delta$ of $20\si{\micro\meter}$ with the MLA using MAN-440. Fiber cores in the study range from  $10-160 \si{\micro\meter}$ This gives a TR between $0.5$ and $8$ which for a rectangular cross section is in the regime where the correction begins to become significant. Thus especially for the thinner fiber cores care must be taken to ensure a sufficiently larg ER, and measured values must be treated as a bound to the actual value until an exact correction is derived for this geometry.  
 
 \cleardoublepage

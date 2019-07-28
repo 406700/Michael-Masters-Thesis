@@ -1,82 +1,14 @@
 %===================================== CHAP 7 =================================
-\chapter{Results}
+\chapter{Results and Discussion}
+The results of this work are presented in two sections. The first section is the results of the sample preparation including polishing, lithography, contact deposition, and oven annealing of the samples. The second section contains the results on of electrical measurements on fibers, and comparisons of coatings on SiGe and Si Fibers.
 
+\section{Sample Preparation}
 
-\section{MiBots}
-\section{Calibration }
-\section{MB25}
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Contact Spacing}&\textbf{200 \si{\micro \meter}} & \textbf{100 \si{\micro \meter}} & \textbf{50 \si{\micro \meter}} \\ \hline
-\textbf{Average Resistivity (\si{\ohm - \cm})}&$0.0139$& $.0198$&$.0390$\\\hline
-\textbf{Corrected Resistivity(\si{\ohm - \cm})}&0$.0122$& $0,0102$ &$.0101$\\\hline
-\end{tabular}
-\end{center}
-\caption{Borate Si Fiber MB25. The correction factor is calculated from \cite{Zimney2007CorrectionStudy} with the assumption of a contact resistivity much greater than the core material. Considering the ratio of the measured resistance of the two point measurements compared to four point $\frac{.3}{50} = 150 $ this is a reasonable assumption.}
-\label{Tabmb25}
-\end{table}
+\subsection{Polishing}
+%surface quality
+%EBSD
 
-The results in Table \ref{Tabmb25} shows the value of using multiple contacts to characterize a fiber, as there is good agreement in the measurements despite large deviations in the fiber diameter. It is hard to fit error bars considering the inhomogenity of the fiber, the designation of a core diameter as an average of the diameter at the ends is a somewhat arbitrary choice, and this introduces a systematic bias into the measurements. This also introduces error into the correction factors, as the ratio of contact spacing to diameter is what determines this value. This is a possibility, considering the $20\%$ difference in the uncorrected value as compared to the corrected values, be these correction factors are also derived for the case of a. 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{fig/Results/2pnt_compareMb25.jpg}
-    \caption{}
-    \label{fig:mb25 2pnt}
-\end{figure}
-
-While the resistance is nonohmic, fitting a line to the two-probe values, gives some idea of the similarity of the measurements. These values are $761, 739, 775, 755$. This could be considered an average resistivity in units of $\si{\ohm}$, but it is more clear to simply show that the contacts are similar to a reasonable degree. Plotting the values closer to 1 mA shows a resistance of $\sim 50 \si{\ohm}$  
-
-This resistance includes the resistance of the Mibot probes, an interface resistance, and the resistance of the thin film. To isolate the contact resistance these can be subtracted from the measurement. The probe resistance is given by the manufacturer as:. Tuching the probe tips together and measuring the resistance gives a value of $\sim 10 \si{\ohm}$. Placing the probes on the same gold contact pad gives a value of$\sim 30$ therefore the majority of the resistance can be contributed to the contact resistance. Considering the sample preparation process is dirty by semiconductor manufacturing standards this is not surprising. It is standard procedure in industry to etch with Hydroflouric Acid before processing a silicon wafer.  Along with a native oxide layer, there is likely additional contamination from the lithography process, if no plasma cleaning is used after development of the resist. Visible contamination was observed with excess development therefore some contamination can be expected even when it is not directly visible.. This can be an explanation for the variance in contact resistivity, as a native oxide should be homogeneous across the fairy large contact pads. Another explanation is  poor adhesion of the contacts with the actual contact composed of smaller micro-contacts within the larger contact area, as observed in (). Sputtering is known to provide better adhesion, and it would be worth seeing if improvements in repeatability and resistance were found with sputtering over evaporation. Practically, this was not easy in the shared facilities at nanolab as a special request would be needed to have these materials installed as sputter targets in the instrument. 
- 
-
-
-\subsection{DB30618}
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{fig/Results/kthdb30618-8.jpg}
-    \caption{Polished fiber: Db30618-8 KTH with deposited Au contacts for measurement with MiBot micro manipulators. The use of the MiBots allows measurement of the fiber, which would not have been possible with larger contact pads due to the cracks in the glass. It is also possible to make more measurements per sample as the larger contact pads have a 1mm spacing, and thus only 4-6 pads can be used on each side of the sample}
-    \label{fig:db30618KTH}
-\end{figure}
-
-
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Sample}& DB30618-8 KTH & DB30618-6 NTNU \\ \hline
-\textbf{Core Diameter}& $157-162$ & 40-46 \\\hline
-\textbf{Number of locations}& 3&1 \\\hline
-\textbf{Standard Deviation}& $0.0045$& NA \\\hline
-\textbf{Averaged Resistivity $\si{\ohm-\cm}$}&$0.127 \pm 0.005$& $0.16 \pm .03$  \\\hline
-\end{tabular}
-\end{center}
-\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
-\label{Tabmb25}
-\end{table}
-
-\section{Db30418}
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Sample}& DB30418-3 KTH & DB30418-3 NTNU \\ \hline
-\textbf{Core Diameter $\si{\micro \meter}$}& $ 163-164.5$ & $28-40$ \\\hline
-\textbf{Number of locations}&$3$&$2$ \\\hline
-\textbf{Standard Deviation}& $\SI{1.75e-5}{\ohm \cm}$ & $ \SI{1.5e-5}{\ohm\cm}$ \\\hline
-\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $\SI{0.00061}{}\pm\SI{ 0.00002}{\ohm \cm}$ &$0.00072 \pm 0.0003 $ \\\hline
-\end{tabular}
-\end{center}
-\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
-\label{Tabmb25}
-\end{table}
-
-
-
+\subsubsection{3d profilometer image of surface roughness}
 
 
 \begin{figure}[h]
@@ -96,11 +28,330 @@ This resistance includes the resistance of the Mibot probes, an interface resist
   \label{fig:sfig2}
 \end{subfigure}% %blank line makes figures vertical
 
-\caption{}
+\caption{EBSD results of GaSb fiber after polish by hand(top) and machine(bottom). EBSD imaging and hand polishing performed by Seunghan Song}
 \label{fig:ebsd}
 \end{figure}
 
+\FloatBarrier
+\subsection{Stress and Cracking}
+Discussion of cracking and possible changes with oven annealing
 
-\section{Discussion}
-Conclusions
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/Siedit.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/SiGe.jpg}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/SiGe2.jpg}
+  %\caption{1b}
+  \label{fig:sfig3}
+\end{subfigure}
+\caption{}
+\label{fig:si_sige}
+\end{figure}
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/parallelcrack.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/parallelcrack2.jpg}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/polishing/parallelcrack3.jpg}
+  %\caption{1b}
+  \label{fig:sfig3}
+\end{subfigure}
+\caption{}
+\label{fig:si_sige}
+\end{figure}
+\FloatBarrier
+\subsection{oven anneal}
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/OA/dd35114_0A--01-1.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/OA/dd35114_0A--01-2.jpg}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/OA/dd35114_0A--01-3.jpg}
+  %\caption{1b}
+  \label{fig:sfig3}
+\end{subfigure}
+\caption{Oven anneal Si fiber with ID dd35114 taken with a reflected light and polorization filter. Large cracks in the cladding, seem to act as a mechanism to relieve stress, as no cracking is observable in the core for these areas. Note due to image stiching, periodic vertical lines appear. }
+\label{fig:si_sige}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/polishing/dd354114_8.jpg}
+    \caption{un annealed DD35114}
+    \label{fig:my_label}
+\end{figure}
+
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/OA/e944190422_redo-dup1.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/OA/e944190422_redo-duplicate2.jpg}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\caption{Da13118 Annealed }
+\label{fig:si_sige}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{fig/polishing/e944.jpg}
+    \caption{un annealed DA13118}
+    \label{fig:my_label}
+\end{figure}
+\FloatBarrier
+\subsection{Maskless Lithography}
+\subsection{Permanent Resist Underlayer}
+Discussion of deposition results and electrical measurements. 
+conclusion: successful but need better deposition method, i.e new e-beam with sample tilt. Better sample cleaing after lithography steps and optimization of the recipe, especially exposure and development time for clean patterns. mr-dwl resist likely leaving some contamination.
+
+\begin{figure}[h!]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/mr-DWL/mb_25_overview_002.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/mr-DWL/mb_25_step_004.jpg}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\caption{}
+\label{fig:si_sige}
+\end{figure}
+
+
+\begin{figure}[h!]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/mr-DWL/mb_25_step_close1.jpg}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+
+\caption{}
+\label{fig:si_sige}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{fig/mr-DWL/mb_25_step_002.jpg}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+
+\FloatBarrier
+
+
+\section{Electrical Measurements}
+\subsection{Calibration }
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Electrode Ratio}&\textbf{.04} & \textbf{.25} & \textbf{1} \\ \hline
+\textbf{Measured Resistivity ($\si{\ohm \cm}$)} & $ 0.02146 \pm 0.00003$& $0.02143$&$0.02126 $\\\hline
+
+\end{tabular}
+\end{center}
+\caption{Resistivity values for a sliver of Si wafer with $\sim 500 \times 500 \si{\micro \meter}$ cross section, with deposited Ti/Au contacts of varying width and $1 \si{\mm}$ spacing measured with Mibot micromanipulators. The error given is the standard deviation of the three measurements. The similarity of the results agrees with the results of Zimney et al \cite{Zimney2007CorrectionStudy} suggesting that due to high contact resistance the contact spacing can be taken as the center to center distance of the sense electrodes.}
+
+\label{Tabcorrection}
+\end{table}
+
+The contact pattern used for the calibration is shown in figure \ref{fig:testwafer} The ends of the wafer were polished to $\SI{3}{\micro\meter}$ grain size and measured with an optical microscope. The thickness was calculated at the midpoint of the sense electrodes assuming a linear variation in thickness from one end to the other. The thickness varied from $490 - 696 \si{\micro \meter}$ The resistivity is calculated as a simple wire with no thickness correction. The contact spacing is taken as the center to center distance of the sense electrodes. The three resistivity values for the small electrode size are averaged to give the final value. The results show good agreement with the stated values of the test wafer and those measured on the original wafer with a jandel four point probe test stand.  The correction factor from \cite{Zimney2007CorrectionStudy} for finite size contacts suggests a $20\%$ difference for the limiting cases of contact resistivity for the large sample pads with an ER = 1 and TR = 1. In fact we see just less than $1\%$ error in the calculations, but the resistivity is in fact decreasing although this may very well be error in the measurements. Further testing with a more pronounced ER where the correction factors have a larger difference would help to clarify these results. 
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{fig/Results/testwafer.png}
+    \caption{Pattern design for the contacts deposited on the calibration sample. The contact spacing is $1\si{\mm}$. The small contact pads have a width of $20\si{\micro\meter}$ and the largest $500\si{\micro\meter}$  }
+    \label{fig:testwafer}
+\end{figure}
+
+\subsubsection{Contact Resistance}
+It was found that the smaller width contacts gave non-ohmic I-V curves, while the larger contacts were linear. Two probe measurements of contacts on a fiber (MB25) with a width of $ 25 \si{\micro\meter}$ show similar non-ohmic I-V curves \ref{fig:mb25 2pnt}. Some peeling at the edge of the contacts was observed, and thus for the smaller contact sizes the adhesion may not have been sufficient. Due to the smaller width of 20um for these pads, it is possible that during development the residue are not easily washed away. Further it was noted that the residues appeared along the edges of the developed resist, as if they were washed out of the undercut areas of the resist. Thus with a smaller contact width, a larger area of the contact would be affected by this residue. 
+
+
+
+The two point measurements of the largest pads gave a resistance $\sim 200-400 \si{\ohm}$ compared to  $\sim .8 \si{\ohm}$ for four point measurements. This gives an interface resistance of approximately $300$ which is much greater than 1 and can be consider a limiting case of high contact resistance as desribed in Zimney et. al. (consider including graph from paper showing correction factor as a function of interface resistance) \cite{Zimney2007CorrectionStudy}. A resistance of $30 \si{\ohm}$ was measured between two of the MiBot probes on the same contact pad. This is small compared to the contact resistance for this estimate and can be ignored.  
+
+
+High contact resistance is note surprising considering the lithography and deposition processes are dirty by semiconductor manufacturing standards. It is standard procedure in industry to etch with HF before processing a silicon wafer. Contamination can be an explanation for the variance in contact resistivity, as a native oxide should be homogeneous across the large contact pads. This suggests a need for further development of the lift off procedure, and test of longer post development plasma cleaning could be beneficial. For measurements performed with the MiBots, a thinner resist coating could be used as the resist no longer needs to accommodate the height difference between the fiber epoxy caused by polishing relief. Sputtering is known to provide better adhesion, and it would be worth seeing if improvements in repeatability and contact resistance were found with sputtering over evaporation. Due to limited time this was not easy in the shared facilities at nanolab as a special request would be needed to have the materials installed as sputter targets in the instrument. Practically a high contact resistance impoves accuracy when the contact resistance is variable, especially for measurements where the contact size is comparable to the spacing as the center to center distance is well defined. For devices or higher contact reproducibility, annealed Al contacts or Ni-Silicide contacts should be investigated. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/Results/2pnt_compareMb25.jpg}
+    \caption{}
+    \label{fig:mb25 2pnt}
+\end{figure}
+\FloatBarrier
+\subsection{Comparison of Coatings on Si and SiGe fibers}
+\subsubsection{Si with Borate coating MB25}
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Contact Spacing}&\textbf{200 \si{\micro \meter}} & \textbf{100 \si{\micro \meter}} & \textbf{50 \si{\micro \meter}} \\ \hline
+\textbf{Average Resistivity ($\si{\ohm \cm}$)}&$0.0139$& $.0198$&$.0390$\\\hline
+\textbf{Corrected Resistivity ($\si{\ohm \cm}$)}&0$.0122$& $0.0102$ &$.0101$\\\hline
+\end{tabular}
+\end{center}
+\caption{Borate Si Fiber MB25. The correction factor is calculated from \cite{Zimney2007CorrectionStudy} with the assumption of a contact resistivity much greater than the core material.}
+\label{Tabmb25}
+\end{table}
+
+The results in Table \ref{Tabmb25} shows the value of using multiple contacts to characterize a fiber (see figure [not yet included]), as there is good agreement in the measurements despite large deviations in the fiber diameter. It is hard to fit error bars considering the inhomogeneity of the fiber, the designation of a core diameter as an average of the diameter at the ends ($165, 197 \si{\micro\meter}$)is a somewhat arbitrary choice and introduces a systematic bias into the measurements, however with contacts at different section along the fiber length the error would tend to average out. This also introduces error into the correction factors, as the ratio of contact spacing to diameter is what determines this value. This is a possibility, considering the $20\%$ difference in the uncorrected value as compared to the corrected values. However the correction is for a rectangular cross section and we would expect a smaller correction for the given thickness due to the smaller cross sectional area, which fits with the results. 
+
+
+
+\FloatBarrier
+\subsubsection{SiGe with Ca: DB30618}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/Results/kthdb30618-8.jpg}
+    \caption{Polished fiber: Db30618-8 KTH with deposited Ti/Au contacts for measurement with MiBot micro manipulators. The use of the MiBots allows measurement of the fiber, which would not have been possible with larger contact pads due to the cracks in the glass. It is also possible to make more measurements per sample as the larger contact pads have a 1mm spacing, and thus only 4-6 pads can be used on each side of the sample}
+    \label{fig:db30618KTH}
+\end{figure}
+
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Sample}& DB30618-8 KTH & DB30618-6 NTNU \\ \hline
+\textbf{Core Diameter}& $157-162$ & 40-46 \\\hline
+\textbf{Number of locations}& 3&1 \\\hline
+\textbf{Standard Deviation}& $0.0045$& NA \\\hline
+\textbf{Averaged Resistivity $\si{\ohm \cm}$}&$0.127 \pm 0.005$& $0.16 \pm .03$  \\\hline
+\end{tabular}
+\end{center}
+\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
+\label{Tabmb25}
+\end{table}
+\FloatBarrier
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Sample}& DB30618-6 redraw 2 & DB30618-6 redraw  2 & DB30618-6 redraw  1\\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$}& $28.7$ &$31.5$&$7.2$\\\hline
+\textbf{Number of locations}&$4$&$ 3$&$1$ \\\hline
+\textbf{Contact Spacing $\si{\micro \meter}$}&$60$, $45$& $60$, $45$ &$40$\\\hline
+\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $0.192 \pm 0.02$ &$ 0.169 \pm .0313 $&$0.385$ \\\hline
+\end{tabular}
+\end{center}
+\caption{When error is given as pm expresses standard deviation of measurements}
+\label{Tabmb25}
+\end{table}
+
+\FloatBarrier
+\subsubsection{SiGe with Borate: DB30418}
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Sample}& DB30418-3 KTH & DB30418-3 NTNU \\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$}& $ 163-164.5$ & $28-40$ \\\hline
+\textbf{Number of locations}&$3$&$2$ \\\hline
+\textbf{Standard Deviation}& $\SI{1.75e-5}{\ohm \cm}$ & $ \SI{1.5e-5}{\ohm\cm}$ \\\hline
+\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $\SI{0.00061}{}\pm\SI{ 0.00002}{\ohm \cm}$ &$0.00072 \pm 0.0003 $ \\\hline
+\end{tabular}
+\end{center}
+\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
+\label{Tabmb25}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+\textbf{Sample}& DB30418-3  as-drawn& DB30418-2 redrawn \\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$}& $ 175$ &$14$\\\hline
+\textbf{Number of locations}&$1$&$2$ \\\hline
+\textbf{Contact Spacing $\si{\micro\meter}$}&$120$&$40$ \\ \hline
+\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $0.166 \pm$ &$.135$ \\\hline
+\end{tabular}
+\end{center}
+\caption{The error given is approximate. Db30418 the second value showed slightly non ohmic results with the two measurements showing 0.127 and ,143}
+\label{Tabmb25}
+\end{table}
+
+\subsection{Discussion of Electrical Measurements}
+%The SiGe fibers showed good agreement despite the segregation of Si and Ge in the fiber. The only outlier is the fiber drawn to 7.2 um. Without EDS results or further measurements, it is not easy to guess why this would show higher resistivity as the composition at the measurement site is not known. Both coatings resulted similar values 
+
+\section{Conclusions}
 The combination of mechanical polishing of an epoxy embedded fiber for use in Maskless Lithography, is promising for characterization of Semiconductor core fibers. The planar dimensions of the sample allow for integration with the existing instruments, which are primarily designed around the use of planar silicon wafers.  Maskless lithography provides more than sufficient resolution at the microscale. It allows for the mask design to be adapted to the changing fiber dimensions without creating a new physical chromium exposure mask, or shadow mask. Further the high resolution of the instrument allows for allignment with micrometer size features on the fiber which can allow for the measurement of specific junctions written in the fiber or areas of interest, as in the graded SiGe fibers produced in the group. The highest concentration areas being only several micrometers in length. The effects of strain in the fibers needs to be addressed in order to minimize cracking effects which are an obstacle to performing hall measurements. The use of micro manipulators provides of means of achieving a high number of measurement per fiber, which can lead to greater accuracy in resistivity meaurements. So far the measurements are limited to low resistivity materials. Annealing of contacts would not only open the range to accurate measurements of higher resistivity materials, but would open the possibility of additional measurement techniques () using one ohmic and one non ohmic contact. 

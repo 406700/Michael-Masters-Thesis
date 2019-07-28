@@ -1,33 +1,54 @@
-%===================================== CHAP 2 =================================
-\chapter{Methods}
-\section{}
-\section{MiBots}
-An alternative to the Lithographic techniques described, is direct probing of the sample using micro manipulators. Remina Techinology Mibots are vacuum compatible micro manipulators with interchangeable tungsten probes capable of electrical probing. The positioning precision is in the nm range making them capable of probing the smallest cores. The MiBots have a stage that can be used with an optical or electron microscope. Use with an electron microscope allows for high accuracy in the measurement of the probe spacing. Direct probing has the advantage of eliminating the challenges associated with lithography, including the need to bridge an cracking in the glass fiber and any relief profile and possible chipping at the glass epoxy interface. Problems with metal adhesion to the three different materials (glass,epoxy,core) are substrate is also eliminated. While work has been done to use micromanipulators to characterize semiconductor fibers \cite{Engel2016DirectPhotosynthesis} past experience in our group has found that reliable electrical contact is difficult to achieve. Ohmic contacts of the manipulators requires sufficient force (look up here). By defining contacts only on the core of the fiber, we hope to negate the problems encountered in the past. 
+%===================================== CHAP 7 =================================
+\chapter{Experimental Methods}
+\subsection{Design of the study}
+Fibers were chosen with different core materials to investigate crystallinity, defects and doping that may occur during fiber drawing. The study is designed in two parts. The first is to give an idea of the resistivities achieved in previous fiber draws for core materials of different starting resistivities. There is little data available MCD fibers and this serves the purpose to give an understanding of what may happen during different drawing conditions, the consistency of the results, as well as highlight other trends. The second part is a comparison of Si and SiGe fibers with two coatings  that are currently being investigated %(for?).
+It is of interest to see if the borate coatings will heavily dope the core, as boron is a common dopant of Si. 
 
-\begin{figure}[t]
-  \centering
-    \includegraphics[width=0.7\textwidth]{fig/MiBots/IMG_20190409_143016.jpg}
- \caption{ Mibot with 1 um Probe tips directly contacting the exposed sample core. The two outer current carrying probes are in contact while the voltage probes are raised above the sample.}
-\label{mibot}
-\end{figure}
+ \begin{table}[h]
+\begin{center}
+    \begin{tabular}{|l|l|l|l|  }
+    \hline
+    \textbf{Fiber ID} & \textbf{Coating} & \textbf{Core Material}   \\ \hline
+    
+      DD35114 & high purity CaOH +SOG & Si 4147 \\
+      DA34416 & TEOS/CaOH HP & Si E944 \\
+      DA13118 & MgB4O7 & 74\% Si 26\% \newline Ge Alpha 10191 \\
+      DA30518 & .95CaOH/.05BaO/TEOS & Si J895  \\ 
+      DB30418 & potassium borate/TEOS MB-4 & SiGe wafer \newline+ 3169 (ge wafer?)    \\ 
+      DB30618 & .95CaOH/.05BaO/TEOS & SiGe wafer \newline + 3169   \\ 
+      MB25 & Borate & Si J895  \\
+      
+     \hline
+    \end{tabular}
+\end{center}
+\caption{Fibers used in the study}
+\label{Tab1}
+\end{table}
 
-\begin{figure}[t]
-  \centering
-    \includegraphics[width=0.7\textwidth]{fig/MiBots/setup.jpg}
- \caption{}
-\label{mibot}
-\end{figure}
+ \begin{table}[h]
+\begin{center}
+    \begin{tabular}{|l|l|l|  }
+    \hline
+    \textbf{ID} & \textbf{type} & \textbf{Resistivity \si{\ohm \cm}}   \\ \hline
+    4147 & P-type Boron doped & 0.1 \\
+    E944 & FZ Si:P &$266-336$\\
+    J895 & FZ Si:P & $> 4800$    \\
+    3169 & FZ intrinsic & NA\\
+    SiGe wafer & 2\%&$1-7$\\
+     \hline
+    \end{tabular}
+\end{center}
+\caption{Fibers used in the study. The resistivities have been measured by four point probe technique by previous master students.\cite{} }
+\label{Tab1}
+\end{table}
+
+\FloatBarrier
+\subsection{Laser Annealing of SiGe fibers}
 
 
-\begin{figure}[t]
-  \centering
-    \includegraphics[width=0.7\textwidth]{fig/MiBots/closeup.jpg}
- \caption{}
-\label{mibot}
-\end{figure}
+\FloatBarrier
 
-%\begin{fgure}[h]
-%\includegraphics[width=.7\textwidth]{fig/MiBots/IMG_20190409_143016.jpg}
-%\caption{Mibot with 1 um Probe tips directly contacting the exposed sample core. The two outer current carrying probes are in contact while the voltage probes are raised above the sample.}
-%\end{figure}
 \cleardoublepage
+
+
+
