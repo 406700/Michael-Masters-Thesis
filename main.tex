@@ -14,7 +14,7 @@
 }
 %\sisetup{inter-unit-product =$\cdot$}
 \usepackage{upgreek}
-
+\usepackage{nicefrac}
 \input{docsetup.tex}
 
 \begin{document}
@@ -32,13 +32,18 @@
 %% PART 3 -- The Chapters
 %\input{chapter1.tex}		%% Edit each chapter
 %\input{overview.tex}
-\input{chapter2.tex}
+\input{b_Introduction.tex}
+\input{c_theory.tex}
 
-\input{chapter5.tex}
-\input{chapter6.tex}
-\input{chapter4.tex}
-\input{chapter3.tex}
-\input{chapter8.tex}
+\chapter{Experimental Methods}
+\import{./}{d_methods.tex}
+\import{./}{d_methods_2.tex}
+\import{./}{d_methods_3.tex}
+
+\chapter{Results and Discussion}
+\import{./}{e_results_1.tex}
+\import{./}{e_results_2.tex}
+%\input{chapter8.tex}
 %% PART 4
 \input{references.tex}	%% Edit your references in "mylib.bib"
 %\input{appendix.tex}		%% Optional

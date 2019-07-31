@@ -1,6 +1,15 @@
-%===================================== CHAP 4 =================================
 
-\chapter{Four Point Probe Measurements}
+\chapter{Background and Theory}
+% Ursula These are the samples and this is what we want to look at. Experiments performed what and why
+
+%\section{SEM and EDS}
+%\section{Deposition}
+%\section{Lithography}
+
+%\section{Ohmic Contacts}
+%\subsection{Silicide Technology}
+%Silicide self alligned layers (salicides) are the dominant industry method for creating ohmic contacts to semiconductor devices. This is due to the metal-like resistivity of silicides and their stability at high temperatures. Common silicides used in the industry are TiSi, WSi, CoSi and NiSi. Of these NiSi has the lowest formation temperature.
+\section{Four Point Probe}
 
     %intro to resistivity 
     
@@ -8,7 +17,7 @@
     When the resistance of the leads and contacts becomes comparable to the sample resistance the method is no longer useful for accurately determining the resistance. The four-probe methods uses four contacts to the sample, two probes supply current to the sample and the voltage is measured across the remaining two probes. In the ideal case, due to their high impedance, no current flows through the voltage probes eliminating any contribution to the resistance due to the contacts and leads. Typical four-probes are designed to measure semiconductor wafers and thin films and consist of four co-linear Tungsten probes with constant spacing. While other geometries are possible %[citations]
     we will now consider this geometry for the following derivations. 
     
- \section{Sample Geometry}
+ \subsection{}{Sample Geometry}
  
     For isotropic materials, electrical resistivity is a property that relates the current density in a sample to the electrical field applied to it. This gives the relation \begin{equation}
         \rho = \frac{E}{J}
@@ -51,10 +60,11 @@
 \subsection{Fiber Geometry}
 A Fiber with sufficiently large contact spacing can be treated as a wire. The resistivity of a wire is given by $\rho = \frac{L}{A}R$
 where L is the length of the wire and A is the cross sectional area. The length L is the center to center spacing of the voltage contacts for the ideal case of high interface resistivity. The cross sectional area $A_t$ of the fiber can be derived as follows: \begin{align}
-\Theta = \arccos{\frac{L}{D}}    \\
-h = \sqrt{r^2-\frac{1}{2}L^2} \\
-    A_t = \frac{\pi+2\Theta}{2\pi}*\pi r^2 + \frac{1}{2}Lh\\
+\Theta = \arccos{\frac{C}{D}}    \\
+h = \sqrt{r^2-\frac{1}{2}C^2} \\
+    A_t = \frac{\pi+2\Theta}{2\pi}*\pi r^2 + \frac{1}{2}Ch\\
 \end{align}    
+Where the variables are correspond to those in figure \ref{fig:fiber}.
 When the fiber is polished past the mid point the cross sectional area $A_b$ is given by: \begin{equation}
     A_b = \pi r^2 -A_t
 \end{equation}
@@ -65,9 +75,6 @@ When the fiber is polished past the mid point the cross sectional area $A_b$ is 
     \caption{Symbols used in the calculation of a fiber cross section, where the shaded area represents the remaining fiber area. Both L and D are subject to measurement errors.}
     \label{fig:fiber}
 \end{figure}
-\subsubsection{Errors in the Resistivity Calculation}
-In order to obtain accurate resistivity results the fiber ends were polished and the core diameter was measured through a calibrated optical microscope before the fibers were mounted in epoxy. This was necessary because the 
-fiber cross section varied slightly along the fiber, and for the case of hand drawn fibers and laser annealed fibers, this variation could be significant over short sections of fiber.  A computer program was written to calculate the sensitivity of the calculation to an error in the measured diameter of the fiber the chord (L in Figure \ref{fig:fiber}) and the measured contact spacing. Experimentally this measurement is performed in a calibrated optical microscope. 
 
   
     %correction for semicircular shape
@@ -142,6 +149,5 @@ and the the spacing is measured from the center of the contact, and the second c
 Figure \ref{ER1} a plots F against TR for the limiting cases of high and low contact resistivity ($\alpha = 0$ and $\alpha >> 1$ and with $ER = 1$ . The contour plots illustrate the potential field and current distribution (arrows) in the sample. The blue dashed line is an analytical solution derived in \cite{} for the case of high interface resistance. First looking at the case of high interface resistivity, where we only see the effects of thickness, we see F remains constant until $TR \sim 2$ where it begins to fall off sharply. This is explained by the current density no longer being constant throughout the thickness of the sample. When the thickness becomes large the current is confined to an area near the surface of the sample as illustrated in the \ref{ER1}(b), thus an increasing thickness causes a reduction in F. 
 We see that for $\alpha = 0$ F approaches 1 for decreasing thickness. We see that as the TR decreases the equipotential created by the pads will have a greater influence through the depth of the sample until the electrodes become a short circuit to the sample. Larger electrodes will have a greater effect on the sample and thus the area where the cases converge will be shifted to higher values of TR. 
 
-In this work it is important to know the point of divergence as the interface resistivity is in general an unknown. Using information on the typical core diameters of the measured fibers and the resolution of the lithography we can find the regime in which we need to worry about the correction factors. A fiber cross section will have a small area compared to a rectangular bar, and thus the current will be confined laterally and probe a larger depth; thus the point where F begins to fall off will be shifted to higher values of TR. Assuming an ER of 1, we can safely achieve a $\Delta$ of $20\si{\micro\meter}$ with the MLA using MAN-440. Fiber cores in the study range from  $10-160 \si{\micro\meter}$ This gives a TR between $0.5$ and $8$ which for a rectangular cross section is in the regime where the correction begins to become significant. Thus especially for the thinner fiber cores care must be taken to ensure a sufficiently larg ER, and measured values must be treated as a bound to the actual value until an exact correction is derived for this geometry.  
-
+In this work it is important to know the point of divergence as the interface resistivity is in general an unknown. Using information on the typical core diameters of the measured fibers and the resolution of the lithography we can find the regime in which we need to worry about the correction factors. A fiber cross section will have a small area compared to a rectangular bar, and thus the current will be confined laterally and probe a larger depth; thus the point where F begins to fall off will be shifted to higher values of TR. Assuming an $\nicefrac{t}{s}$ of 1, we can safely achieve a $\Delta$ of $20\si{\micro\meter}$ with the MLA using MAN-440. Fiber cores in the study range from  $10-160 \si{\micro\meter}$ This gives $ $ between $0.5$ and $8$ which for a rectangular cross section is in the regime where the correction begins to become significant. Thus especially for the thinner fiber cores care must be taken to ensure a sufficiently large $\nicefrac{t}{s}$, and measured values must be treated as a bound to the actual value until an exact correction is derived for this geometry.  
 \cleardoublepage
