@@ -1,151 +1,378 @@
 
+\section{SiGe Fibers}
+This section discusses the composition and crystal structure of as-drawn and laser annealed SiGe fibers used in this study. X-ray Diffraction (XRD) Electron Probe Micro Analysis (EPMA), and EDS results presented in this section are the work of Mustafa Balci \cite{Balci2019FiberAnalysis}. SEM micrographs of polished fibres in figure \ref{sige_contrast} are the authors work.
 
+\subsection{As-drawn SiGe}
+The as-drawn SiGe A and SiGe B fibers show an inhomogeneous core composition similar to that seen by Coucheron et. al. \cite{Coucheron2016}  and is seen in SEM micrographs of the polished fibers, figure \ref{sige_contrast}.  Ge rich regions appear brighter in the SEM microgrpahs due to compositional contrast originating from the higher atomic number of Ge. The remarkable fourfold symmetry is unexpected and is not easily explained from the current understanding of the solidification process. 
+
+EPMA results indicate Ge composition range of approximately $3-36 \text{at} \%$ from quantitative point analysis \ref{as-drawn eds}. Most areas showed near $4 \text{at} \%$ Ge. Oxygen content is near $1 \text{at}\%$ for SiGe A with a slight increase for SiGe B. Boron fluctuates from below the detection level to near $1 \text{at}\%$ for SiGe B while SiGe A only shows a few points with detectable boron content. X-ray diffraction results (figure \ref{xrdb}) on fiber SiGe B  indicate that the fiber is single crystalline throughout the fiber cross section with no transverse boundaries. 
+
+
+
+\subsection{Laser annealed SiGe}
+EPMA results shown in figure \ref{annealed_sigeb} show that the composition is homogeneous after laser annealing. EDS results (not yet included) indicate a slight increase in oxygen content to near $2 \text{at}\%$ in SiGe B. XRD results on SiGe B show a similar result with a slight change in the peak shape from the reduction in high concentration Ge areas. SiGe A fiber did not appear to be single crystaline before or after annealing due to the appearance of unknown peaks, although annealing caused an improvement in crystalinity. 
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/DB30418_contrast3.png}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/DB30418_contrast1.png}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/DB30418_contrast2.png}
+  %\caption{1b}
+  \label{fig:sfig3}
+\end{subfigure}
+\caption{SEM micrograph of two DB30418 fibers. The top two images are the same fiber, while the bottom fiber has been polished with a different orientation. The large black spots on the images are due to particle contamination }
+\label{sige_contrast}
+\end{figure}
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/db30418_point.png}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/Screenshot from 2019-08-20 15-23-54.png}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+\caption{As-drawn SiGe B}
+\label{sige_contrast}
+\end{figure}
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/db30618-8_point.png}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/db30618_point.png}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\caption{As-drawn SiGe A}
+\label{sige_contrast}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/EDS/db30418-3_annealed.png}
+    \caption{Caption}
+    \label{annealed_sigeb}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/EDS/sige-a-xrd.png}
+    \caption{Caption}
+    \label{xrda}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/EDS/db30418-xrd.png}D
+    \caption{Caption}
+    \label{xrdb}
+\end{figure}
+
+
+\FloatBarrier
 \section{Electrical Measurements}
 
-\subsubsection{Errors in the Resistivity Calculation}
-In order to obtain accurate resistivity results the fiber ends were polished and the core diameter was measured through a calibrated optical microscope before the fibers were mounted in epoxy. This was necessary because the 
-fiber cross section varied slightly along the fiber, and for the case of hand drawn fibers and laser annealed fibers, this variation could be significant over short sections of fiber.  A computer program was written to calculate the sensitivity of the calculation to an error in the measured diameter of the fiber the chord (L in Figure \ref{fig:fiber}) and the measured contact spacing. Experimentally this measurement is performed in a calibrated optical microscope. 
+\subsection{Overview}
+Fibers were chosen with different core materials and coatings to investigate crystallinity, defects and doping that may occur during fiber drawing. First measurements of silicon core fibers with high and low starting material resistivity is given. This gives a baseline for resistivities achieved in previous fiber draws. There is little data available MCD fibers and this serves the purpose to give an understanding of what may happen during different drawing conditions, the consistency of the results, as well as highlight other trends. %Fibers were chosen with different core materials to investigate crystallinity, defects and doping that may occur during fiber drawing.
+Second, a comparison of Si and SiGe fibers with two different coatings is given. The coatings used are  a standard CaO based coating \cite{Nordstrand2013AlkalineProduction} and the other is a coating containing boron. It is of interest to see if the boron containing coatings will heavily dope the core, as boron is a common dopant of Si. Table \ref{fibers} lists the fibers used in this study, their core material and coating type. Table \ref{resistivity} gives the resistivities of the starting materials.
 
-\subsection{Calibration }
+ \begin{table}[h]
+\begin{center}
+    \begin{tabular}{|l|l|l|l|  }
+    \hline
+    \textbf{Sample ID} & \textbf{Coating} & \textbf{Core Material}   \\ \hline
+    
+      DD35114(Si A) & high purity CaOH +SOG & Si 4147 \\
+      DA34416 (Si B) & TEOS/CaOH HP & Si E944 \\
+      DA30518 (Si C) & .95CaOH/.05BaO/TEOS & Si J895  \\ 
+      MB25 (Si D) & Borate & Si J895  \\
+      DB30618 (SiGe A)& .95CaOH/.05BaO/TEOS & SiGe wafer \newline + 3169   \\ 
+      DB30418 (SiGe B)& potassium borate/TEOS MB-4 & SiGe wafer \newline+ 3169 (ge wafer?)    \\ 
+      DA13118 (SiGe C)& MgB4O7 & 74\% Si 26\% \newline Ge Alpha 10191 \\
+     \hline
+    \end{tabular}
+\end{center}
+\caption{Fibers used in the study}
+\label{fibers}
+\end{table}
+
+ \begin{table}[h]
+\begin{center}
+    \begin{tabular}{|l|l|l|  }
+    \hline
+    \textbf{ID} & \textbf{type} & \textbf{Resistivity \si{\ohm \cm}}   \\ \hline
+    4147 & P-type Boron doped & 0.1 \\
+    E944 & FZ Si:P &$266-336$\\
+    J895 & FZ Si:P & $> 4800$    \\
+    3169 & FZ intrinsic & NA\\
+    SiGe wafer & 2\%&$1-7$\\
+     \hline
+    \end{tabular}
+\end{center}
+\caption{Fibers used in the study. The resistivities are provided by the manufacturer }
+\label{resistivity}
+\end{table}
+
+\subsection{Calibration}
 
 \begin{table}[!htb]
 \begin{center}
 \begin{tabular}{ | l | l | l | l |}
 \hline
-\textbf{Electrode Ratio}&\textbf{.04} & \textbf{.25} & \textbf{1} \\ \hline
+\textbf{Electrode width /contact spacing}&\textbf{.04} & \textbf{.25} & \textbf{1} \\ \hline
 \textbf{Measured Resistivity ($\si{\ohm \cm}$)} & $ 0.02146 \pm 0.00003$& $0.02143$&$0.02126 $\\\hline
 
 \end{tabular}
 \end{center}
 \caption{Resistivity values for a sliver of Si wafer with $\sim 500 \times 500 \si{\micro \meter}$ cross section, with deposited Ti/Au contacts of varying width and $1 \si{\mm}$ spacing measured with Mibot micromanipulators. The error given is the standard deviation of the three measurements. The similarity of the results agrees with the results of Zimney et al \cite{Zimney2007CorrectionStudy} suggesting that due to high contact resistance the contact spacing can be taken as the center to center distance of the sense electrodes.}
-
 \label{Tabcorrection}
 \end{table}
 
-The contact pattern used for the calibration is shown in figure \ref{fig:testwafer} The ends of the wafer were polished to $\SI{3}{\micro\meter}$ grain size and measured with an optical microscope. The thickness was calculated at the midpoint of the sense electrodes assuming a linear variation in thickness from one end to the other. The thickness varied from $490 - 696 \si{\micro \meter}$ The resistivity is calculated as a simple wire with no thickness correction. The contact spacing is taken as the center to center distance of the sense electrodes. The three resistivity values for the small electrode size are averaged to give the final value. The results show good agreement with the stated values of the test wafer and those measured on the original wafer with a jandel four point probe test stand.  The correction factor from \cite{Zimney2007CorrectionStudy} for finite size contacts suggests a $20\%$ difference for the limiting cases of contact resistivity for the large sample pads with an ER = 1 and TR = 1. In fact we see just less than $1\%$ error in the calculations, but the resistivity is in fact decreasing although this may very well be error in the measurements. Further testing with a more pronounced ER where the correction factors have a larger difference would help to clarify these results. 
+A calibration sample was made from a wafer of known resistivity [??values], in order to check the accuracy of the resistivity measurements and to test the influence of contact size on the measurements. The contact pattern used for the calibration is shown in figure \ref{fig:testwafer}. The ends of the wafer were polished to $\SI{3}{\micro\meter}$ grain size and measured with an optical microscope to determine the cross sectional area. The thickness was calculated at the midpoint of the sense electrodes assuming a linear variation in thickness from one end to the other. The thickness varied from $490 - 696 \si{\micro \meter}$. The resistivity is calculated as a simple wire with no thickness correction. The contact spacing is taken as the center to center distance of the sense electrodes. Measurements were done using MiBots as shown in \ref{mibotcalibration}. The results show good agreement with the stated values of the test wafer. The correction factor from \cite{Zimney2007CorrectionStudy} for finite size contacts suggests a $20\%$ difference for the limiting cases of contact resistivity for the large sample pads with an ER = 1 and TR = 1 as seen in figure \ref{fig2}. In fact we see just less than $1\%$ error in the calculations. 
 
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=\textwidth]{fig/Results/testwafer.png}
-    \caption{Pattern design for the contacts deposited on the calibration sample. The contact spacing is $1\si{\mm}$. The small contact pads have a width of $20\si{\micro\meter}$ and the largest $500\si{\micro\meter}$  }
+    \caption{Pattern design for the contacts deposited on the calibration sample. The contact spacing is $1\si{\mm}$. The contact pad widths are $40, 200$ \& $500 \si{\micro\meter}$. }
     \label{fig:testwafer}
 \end{figure}
 
+
+\begin{figure}[t]
+  \centering
+    \includegraphics[width=0.7\textwidth]{fig/MiBots/closeup.jpg}
+ \caption{}
+\label{mibotcalibration}
+\end{figure}
 \subsubsection{Contact Resistance}
-It was found that the smaller width contacts gave non-ohmic I-V curves, while the larger contacts were linear. Two probe measurements of contacts on a fiber (MB25) with a width of $ 25 \si{\micro\meter}$ show similar non-ohmic I-V curves \ref{fig:mb25 2pnt}. Some peeling at the edge of the contacts was observed, and thus for the smaller contact sizes the adhesion may not have been sufficient. Due to the smaller width of 20um for these pads, it is possible that during development the residue are not easily washed away. Further it was noted that the residues appeared along the edges of the developed resist, as if they were washed out of the undercut areas of the resist. Thus with a smaller contact width, a larger area of the contact would be affected by this residue. 
+It was found that the smaller width contacts gave non-ohmic I-V curves, while the larger contacts were linear (figure \ref{fig:calibration_2pnt}). The two point measurements of the largest pads gave a resistance $\sim 200-400 \si{\ohm}$ compared to  $\sim .8 \si{\ohm}$ for four point measurements. This gives an interface resistance factor, $\alpha$, of roughly $150$ which is much greater than 1 and can be consider a limiting case of high contact resistance as described in Zimney et. al. %(consider including graph from paper showing correction factor as a function of interface resistance) \cite{Zimney2007CorrectionStudy}. 
+A resistance of $30 \si{\ohm}$ was measured between two of the MiBot probes on the same contact pad. This is small compared to the contact resistance, for this estimate, and can be ignored. Some peeling at the edge of the contacts was observed, and thus for the smaller contact sizes the adhesion may not have been sufficient to ensure good contact. It was noted that the residues appeared along the edges of the developed resist, as seen in image \ref{fig:residue}. Thus with a smaller contact width, a larger area of the contact would be affected by this residue. 
+
+Two probe measurements of contacts on fiber Si D with a width of $ 25 \si{\micro\meter}$ show similar non-ohmic I-V curves \ref{fig:mb25 2pnt} as the small contacts on the calibration sample. A longer plasma ash was used on this sample and improvements can be seen in the similar resistance between contacts, and more linear I-V curve despite a smaller contact width.  
 
 
+High contact resistance is not surprising considering the lithography and deposition processes are dirty by semiconductor manufacturing standards. It is standard procedure in industry to etch with HF before processing a silicon wafer. Contamination can be an explanation for the variance in contact resistivity, as a native oxide should be homogeneous across the large contact pads. This suggests a need for further development of the lift off procedure, and test of longer post development plasma cleaning could be beneficial. For measurements performed with the MiBots, a thinner resist could be used as the resist no longer needs to accommodate the height difference between the fiber epoxy caused by polishing relief. This opens up options for trying new resists that may have a cleaner development. Sputtering is known to provide better adhesion, and it would be worth seeing if improvements in repeatability and contact resistance were found with sputtering over evaporation. Due to limited time this was not easy in the shared facilities at nanolab as a special request would be needed to have the materials installed as sputter targets in the instrument. Practically a high contact resistance ($\alpha >> 1 $) improves accuracy as the contact spacing is easily defined. This is especially relevant for measurements where the contact size is comparable to the spacing. For devices requiring lower contact resistance or for measurement of fibers with higher resistivity, annealed Al contacts or Ni-Silicide contacts should be investigated. 
 
-The two point measurements of the largest pads gave a resistance $\sim 200-400 \si{\ohm}$ compared to  $\sim .8 \si{\ohm}$ for four point measurements. This gives an interface resistance of approximately $300$ which is much greater than 1 and can be consider a limiting case of high contact resistance as desribed in Zimney et. al. (consider including graph from paper showing correction factor as a function of interface resistance) \cite{Zimney2007CorrectionStudy}. A resistance of $30 \si{\ohm}$ was measured between two of the MiBot probes on the same contact pad. This is small compared to the contact resistance for this estimate and can be ignored.  
-
-
-High contact resistance is note surprising considering the lithography and deposition processes are dirty by semiconductor manufacturing standards. It is standard procedure in industry to etch with HF before processing a silicon wafer. Contamination can be an explanation for the variance in contact resistivity, as a native oxide should be homogeneous across the large contact pads. This suggests a need for further development of the lift off procedure, and test of longer post development plasma cleaning could be beneficial. For measurements performed with the MiBots, a thinner resist coating could be used as the resist no longer needs to accommodate the height difference between the fiber epoxy caused by polishing relief. Sputtering is known to provide better adhesion, and it would be worth seeing if improvements in repeatability and contact resistance were found with sputtering over evaporation. Due to limited time this was not easy in the shared facilities at nanolab as a special request would be needed to have the materials installed as sputter targets in the instrument. Practically a high contact resistance impoves accuracy when the contact resistance is variable, especially for measurements where the contact size is comparable to the spacing as the center to center distance is well defined. For devices or higher contact reproducibility, annealed Al contacts or Ni-Silicide contacts should be investigated. 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{fig/Results/2pnt_compareMb25.jpg}
-    \caption{}
+    \includegraphics[width=.6\textwidth]{fig/Results/contact_resistance_comparison.png}
+    \caption{Two point measurements between adjacent contacts on the calibration sample for three contact widths. The smaller size contact show a larger resistance and non-ohmic I-V curve, possibly originating from contamination at the edge of the contacts from the resist development. The resistance scales with contact area for high contact resistance, and the larger contacts show a nearly linear I-V curve. }
+    \label{fig:calibration_2pnt}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.6\textwidth]{fig/Results/2pnt_compareMb25.jpg}
+    \caption{Two point measurements between adjacent contact pairs for sample Si D. The I-V curves are slightly non-linear but show very little variation between samples suggesting good contact uniformity. }
     \label{fig:mb25 2pnt}
 \end{figure}
 \FloatBarrier
-\subsection{Comparison of Coatings on Si and SiGe fibers}
-\subsubsection{Si with Borate coating MB25}
+
+\subsection{Si fibers}
+\subsubsection{Si A Fiber}
+The resistivity results of Si A are shown in table \ref{si_A}.  The results show the resistivity has dropped from $0.1 \si{\ohm\cm}$ in the starting material to  $.0116 \pm .00142 \si{\ohm\cm}$ in the fiber core. The measurements generally show a very small deviation within each sample with a larger variation between samples. As samples were taken from different sections of the many meters of fiber drawn, this variation may originate from changes in oxygen content or nonuniformity in the coating. Changes in coating thickness would affect the diffusion of impurities from the interface modifier into the fiber core.  The resistivity of Si B (figure \ref{si_B} dropped from $266-336 \si{\ohm\cm}$ to $1.67-1.76 \si{\ohm\cm}$ indicating an introduction of impurities. The larger drop in resistivity for a higher starting resisitivity is as expected based on the scaling of resisitivity with dopant density considering no change in mobility. The dopant density in the core after fiber drawing should be roughly based on the available dopants (coating thickness and impurity density) and core volume and thus should be similar between fibers if these parameters remain the same. 
+Based on these findings the impurity content of the interface modifier should be investigated to find the source of dopants. Further a more sensitive spectroscopy technique such as SIMS could be used to investigate impurity content of the fiber cores. 
 
 \begin{table}[!h]
 \begin{center}
-\begin{tabular}{ | l | l | l | l |}
+\begin{tabular}{ | l | l | l | l |l|}
 \hline
-\textbf{Contact Spacing}&\textbf{200 \si{\micro \meter}} & \textbf{100 \si{\micro \meter}} & \textbf{50 \si{\micro \meter}} \\ \hline
-\textbf{Average Resistivity ($\si{\ohm \cm}$)}&$0.0139$& $.0198$&$.0390$\\\hline
-\textbf{Corrected Resistivity ($\si{\ohm \cm}$)}&0$.0122$& $0.0102$ &$.0101$\\\hline
+\textbf{Sample}& Si A 1 & Si A 2 & Si A 3 & Si A oven anneal\\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$} &$55$& $54.5$&$54.5$ &$55$\\\hline
+\textbf{Number of locations}                &$3$&  $1$& $2$&$3$\\\hline
+\textbf{Contact Spacing $\si{\micro \meter}$}&$40$& $70$&$ 300, 115$&$80$\\\hline
+\textbf{Resistivity $\si{\ohm \cm}$}& $0.0119 \pm 0.00147$ &  $0.014$&$0.0127 \pm 0.0002$& $0.0113 \pm 0.0005$ \\\hline
 \end{tabular}
 \end{center}
-\caption{Borate Si Fiber MB25. The correction factor is calculated from \cite{Zimney2007CorrectionStudy} with the assumption of a contact resistivity much greater than the core material.}
+\caption{combined $.0125 \pm ?$}
+\label{si_A}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l |l|}
+\hline
+\textbf{Sample}& Si B  &  Si B oven anneal\\ \hline
+\textbf{Core Diameter}  & 65 & 65 \\ \hline
+\textbf{Number of locations}&        1&1 \\ \hline
+\textbf{Contact Spacing $\si{\micro \meter}$} &40 & 40 \\ \hline
+\textbf{Resistivity $\si{\ohm \cm}$} &$1.67$ & $1.76$ \\ \hline
+\end{tabular}
+\end{center}
+\caption{}
+\label{si_B}
+\end{table}
+
+
+\subsection{As-drawn SiGe}
+Due to heavy cracking of the large diameter as-drawn SiGe fibers (see figure \ref{sige_contrast}), only one as-drawn sample of the laser annealed samples was measured. The fiber SiGe C is from a previous draw, and added for further comparison of SiGe fibers. A high metals content in the Ge Alpha starting material may be a cause of the low resistivity as the SiGe B-3 with boron coating had a resistivity three orders of magnitude higher.  
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | }
+\hline
+\textbf{Sample}& SiGe B-3 as-drawn & SiGe C\\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$}& $ 175$ & 106\\\hline
+\textbf{Number of locations}&$1$ & $2$ \\\hline
+\textbf{Contact Spacing $\si{\micro\meter}$}&$120$ & 45\\ \hline
+\textbf{Resistivity $\si{\ohm \cm}$}& $0.16 \pm 0.01$ & $.00024 \pm .000014$\\\hline
+\end{tabular}
+\end{center}
+\caption{}
 \label{Tabmb25}
 \end{table}
 
-The results in Table \ref{Tabmb25} shows the value of using multiple contacts to characterize a fiber (see figure [not yet included]), as there is good agreement in the measurements despite large deviations in the fiber diameter. It is hard to fit error bars considering the inhomogeneity of the fiber, the designation of a core diameter as an average of the diameter at the ends ($165, 197 \si{\micro\meter}$)is a somewhat arbitrary choice and introduces a systematic bias into the measurements, however with contacts at different section along the fiber length the error would tend to average out. This also introduces error into the correction factors, as the ratio of contact spacing to diameter is what determines this value. This is a possibility, considering the $20\%$ difference in the uncorrected value as compared to the corrected values. However the correction is for a rectangular cross section and we would expect a smaller correction for the given thickness due to the smaller cross sectional area, which fits with the results. 
+\FloatBarrier
+\subsection{Redrawn SiGe fibers}
+Redrawing of the fibers was performed in order to obtain smaller core diameters in order to aid laser annealing of the fibers. The target core diameter was $\sim 30 - 60 \si{\micro\meter}$ but this proved difficult to control. Two redraws were performed as the first resulted in core diameters on the order of  $ 10  \si{\micro\meter}$ with the second draw giving core diameters of $\sim 25-35 \si{\micro\meter}$. Within each draw the core diameter varied greatly was generally tapered. The sections with the least variation were chosen for resistivity measurements.
+
+The resistivities of the redrawn samples is shown in table \ref{redraw_resistivity}.  The resistivity of redrawn SiGe B is close to the as-drawn value, indicating little influence from redrawing. For Si fibers, redrawing fibers into tapers has been shown to produce single crystal sections \cite{??}. A slight reduction in resistivity would be consistent with improved crystalinity, however a single measurement is insufficient for comparison.  Interestingly the resistivity of samples SiGe A and SiGe B are similar and almost within uncertainty. This indicates little influence of boron doping in the SiGe B fiber, as compared to the Ca coated SiGe A fiber.  
+
+SiGe A fiber shows good agreement across two samples with a total of $7$ measurements. This indicates surprisingly little influence due to the inhomogeneous Ge distribution. This could indicate an similar average Ge content in the measured sections, although the Ge distribution is unknown as no measurement was performed on the redrawn fibers. The smallest redrawn fiber with a core diameter of only $7.2 \si{\micro\meter}$ shows roughly double the resistivity possibly explained by a change in composition.  %.  This is partly supported by the increased resistivity of the smallest sample with a core diameter of only $7.2 \si{\micro\meter}$. As the fiber is drawn to this core size, the regular Ge rich areas seen in figure \ref{sige_contrast} would be stretched further apart, and the contacts would span less repetitions of the pattern or potentially fall between Ge rich areas. 
+The resistivity of these fibers is lower than would be expected considering the high resistivity of the Si starting material. This is consistent with the previous observation of that coating acting as a source of dopants, however it is harder to reconcile the similar resistivities considering that each fiber has a different coating. 
+
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ | l | l | l | l | l |}
+\hline
+\textbf{Sample}& SiGe B-2 & SiGe A-6 & SiGe A-6 & SiGe A-6\\ \hline
+\textbf{Core Diameter $\si{\micro \meter}$}& $14$ & $28.7$ &$31.5$&$7.2$\\\hline
+\textbf{Number of locations}& $2$ &$4$&$ 3$&$1$ \\\hline
+\textbf{Contact Spacing $\si{\micro \meter}$}&$40$ &$60$, $45$& $60$, $45$ &$40$\\\hline
+\textbf{Resistivity $\si{\ohm \cm}$}& $.135 \pm .011$ &$0.192 \pm 0.02$ &$ 0.169 \pm .0313 $&$0.385$ \\\hline
+\end{tabular}
+\end{center}
+\caption{Resistivities of SiGe fibers after redrawing the fibers to a smaller diameter. The error given is approximate. Db30418 the second value showed slightly non ohmic results with the two measurements showing 0.127 and ,143. When error is given as pm expresses standard deviation of measurements. Uncertainty is expressed as the standard deviation of the measurements}
+\label{redraw_resistivity}
+\end{table}
+
+\FloatBarrier
+\subsection{Si with Borate}
+
+The hand-drawn fiber with sample ID Si D has an intrinsic silicon core and Borate containing coating. The core diameter varied along the fiber. The core varied in diameter over short sections of fiber and was not perfectly cylindrical, thus it was impossible to know the exact core size for a particular measurements. The core diameter measured at the fiber ends were $263$ and $297 \si{\micro\meter}$ and the diameter was taken as the average of the two ends. There was little cracking in this sample thus it was possible to deposit many contacts across the fiber in order to average the measurements. Three contact spacing were used and each spacing was measured at two different points along the fiber. Due to the high resistivity of the starting material small contact spacings were used to minimize the voltages required to measure the fiber in the case of a high resisitivity. A correction factor for samples thickness is applied in these cases.
+
+\begin{table}[!h]
+\begin{center}
+%\caption*{\textbf{Si-D core diameter} \bm{280 \si{\micro\meter}}}% \si{\micro\meter}$}}
+\begin{tabular}{ | l | l | l | l |}
+\hline
+
+\textbf{Contact Spacing}&\textbf{200 \si{\micro \meter}} & \textbf{100 \si{\micro \meter}} & \textbf{50 \si{\micro \meter}} \\ \hline
+\textbf{Resistivity ($\si{\ohm \cm}$)}&$0.0145 \pm .0009$& $.0206 \pm .0006$& $.0415 \pm .003$\\\hline
+\textbf{Corrected Resistivity ($\si{\ohm \cm}$)}&0$.0123$& $0.0104$ &$.0106$\\\hline
+\end{tabular}
+\end{center}
+\caption{Resistivity values of sample Si-D  with boron containing coating. The core diameter, taken as an average of the two ends, is $280 \si{\micro \meter}$. The correction factor is calculated from \cite{Zimney2007CorrectionStudy} with the assumption of a contact resistance much greater than the fiber resistance.}
+\label{Tabmb25}
+\end{table}
+
+The results in Table \ref{Tabmb25} shows as there is good agreement in the measurements for a given contact spacing despite large deviations in the fiber diameter. Despite the small standard deviation, the designation of a core diameter as an average of the diameter at the ends is a somewhat arbitrary choice and introduces a systematic bias into the measurements.  This also introduces error into the correction factors, as the ratio of contact spacing to diameter is what determines this value.  There is a  $\sim 20\%$ difference in the values with $200 \si{\micro\meter}$ contact spacing as compared to the smaller spacings with the larger correction factor. The correction factor is only approximate as it is derived for a wire with rectangular cross section and we would expect a smaller correction for the given thickness for a half cylinder.  
 
 
 
 \FloatBarrier
-\subsubsection{SiGe with Ca: DB30618}
+\subsubsection{Laser Annealed SiGe}
+Laser annealing of SiGe fibers was performed both at KTH and at NTNU. A small amount of fiber had been previously annealed at KTH with the full size fibers, however at NTNU annealing was performed on redrawn fibers as the power was insufficient for the original fibers. An attempt was made at annealing the small fibers with $300 \si{\micro\meter}$ diameter but it was found that the core formed into small balls due to surface tension \cite{Fokine2017LaserFibers} as seen in figure \ref{balls}. The ...setup with ...laser provided more control over annealing, gave good results for the redrawn fibers with cores in the range of $30-50\si{\micro\meter}$. 
+
+The resistivity of SiGe A with CaO based coating is essentially unchanged after laser annealing, figure \ref{resistivitysigeannealed}. SiGe B on the other hand shows a drop of over two orders of magnitude. This is a surprising result considering the similar resistivities of the as-drawn fibers. Dopants are known to collect at grain boundaries, however XRD results \ref{xrdb} show the as-drawn fiber is single crystalline. Boron content in EPMA point analysis shows similar boron content for Si and Ge rich areas. This suggests that the dopants are diffusing into the core during laser annealing. Temperature dependent diffusion rates could explain an increase in boron diffusion, due to higher temperatures during laser annealing. Higher oxygen content after laser annealing also suggests interaction between the core and coating/cladding. Further work could investigate this process on Si and Ge fibers and look for changes in doping within the range of available annealing parameters. This could offer a way to gain spatial control over dopant density, a highly desirable property for device fabrication.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/Results/wei_anneal.png}
+    \caption{Results of laser annealing small cored fiber, estimated to have a core diameter of $7-14 \si{\micro\meter}$. A $5\si{\mm}$ area of annealed fiber is shown, with the rest of the fiber core forming into small spheres}
+    \label{balls}
+\end{figure}
 
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{fig/Results/kthdb30618-8.jpg}
-    \caption{Polished fiber: Db30618-8 KTH with deposited Ti/Au contacts for measurement with MiBot micro manipulators. The use of the MiBots allows measurement of the fiber, which would not have been possible with larger contact pads due to the cracks in the glass. It is also possible to make more measurements per sample as the larger contact pads have a 1mm spacing, and thus only 4-6 pads can be used on each side of the sample}
+    \caption{Polished fiber: SiGe A section 8 annealed at KTH with deposited Ti/Au contacts for measurement with MiBot micro manipulators. The use of the MiBots for measurement on small contact pads enabled measurement of a fiber with many cracks surrounding the fiber core. The use of Mibots also allows for more measurements per sample as the larger contact pads have a 1mm spacing, and thus only 4-6 pads can be used on each side of the sample}
     \label{fig:db30618KTH}
 \end{figure}
 
 
 \begin{table}[!h]
 \begin{center}
-\begin{tabular}{ | l | l | l | l |}
+\begin{tabular}{ | l | l | l | l |l|l|}
 \hline
-\textbf{Sample}& DB30618-8 KTH & DB30618-6 NTNU \\ \hline
-\textbf{Core Diameter}& $157-162$ & 40-46 \\\hline
-\textbf{Number of locations}& 3&1 \\\hline
-\textbf{Standard Deviation}& $0.0045$& NA \\\hline
-\textbf{Averaged Resistivity $\si{\ohm \cm}$}&$0.127 \pm 0.005$& $0.16 \pm .03$  \\\hline
+\textbf{Sample}& SiGe A-8  & SiGe A-6  &SiGe B-3  &SiGe B \\ 
+&KTH&NTNU&KTH&NTNU \\ \hline
+\textbf{Core Diameter $\si{\micro\meter}$}& $157-162$ & $40-46$&$163-164.5$&$28-40$ \\\hline
+\textbf{Contact Spacing $\si{\micro\meter}$}& $200, 225$ & $55$&$300$&$40$ \\ \hline
+\textbf{Number of locations}& 3&1 &3&2\\\hline
+\textbf{Standard Deviation}& $0.0045$& NA&$.0000175$&$0.000015$ \\\hline
+\textbf{Resistivity $\si{\ohm \cm}$}&$0.127 \pm 0.005$& $0.16 \pm .03$&$0.00061 \pm 0.00002$& $0.00072 \pm 0.0003$ \\\hline
 \end{tabular}
 \end{center}
-\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
-\label{Tabmb25}
-\end{table}
-\FloatBarrier
-
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Sample}& DB30618-6 redraw 2 & DB30618-6 redraw  2 & DB30618-6 redraw  1\\ \hline
-\textbf{Core Diameter $\si{\micro \meter}$}& $28.7$ &$31.5$&$7.2$\\\hline
-\textbf{Number of locations}&$4$&$ 3$&$1$ \\\hline
-\textbf{Contact Spacing $\si{\micro \meter}$}&$60$, $45$& $60$, $45$ &$40$\\\hline
-\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $0.192 \pm 0.02$ &$ 0.169 \pm .0313 $&$0.385$ \\\hline
-\end{tabular}
-\end{center}
-\caption{When error is given as pm expresses standard deviation of measurements}
-\label{Tabmb25}
+\caption{Results of resistivity measurements on laser annealed SiGe fibers with Ca and B coatings. Due to large variations in the core size, the deviation is approximate and is calculated as the resistivity with the largest and smallest core diameters. The standard deviation shows variation within the measurements. SiGe B shows a drop of more than two orders of magnitude after annealing while SiGe A remains similar to the as-drawn value. }
+\label{resistivitysigeannealed}
 \end{table}
 
 \FloatBarrier
-\subsubsection{SiGe with Borate: DB30418}
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Sample}& DB30418-3 KTH & DB30418-3 NTNU \\ \hline
-\textbf{Core Diameter $\si{\micro \meter}$}& $ 163-164.5$ & $28-40$ \\\hline
-\textbf{Number of locations}&$3$&$2$ \\\hline
-\textbf{Standard Deviation}& $\SI{1.75e-5}{\ohm \cm}$ & $ \SI{1.5e-5}{\ohm\cm}$ \\\hline
-\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $\SI{0.00061}{}\pm\SI{ 0.00002}{\ohm \cm}$ &$0.00072 \pm 0.0003 $ \\\hline
-\end{tabular}
-\end{center}
-\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
-\label{Tabmb25}
-\end{table}
 
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{ | l | l | l | l |}
-\hline
-\textbf{Sample}& DB30418-3  as-drawn& DB30418-2 redrawn \\ \hline
-\textbf{Core Diameter $\si{\micro \meter}$}& $ 175$ &$14$\\\hline
-\textbf{Number of locations}&$1$&$2$ \\\hline
-\textbf{Contact Spacing $\si{\micro\meter}$}&$120$&$40$ \\ \hline
-\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $0.166 \pm$ &$.135$ \\\hline
-\end{tabular}
-\end{center}
-\caption{The error given is approximate. Db30418 the second value showed slightly non ohmic results with the two measurements showing 0.127 and ,143}
-\label{Tabmb25}
-\end{table}
 
-\subsection{Discussion of Electrical Measurements}
+
+
+%subsubsection{SiGe with Borate: DB30418}
+%\begin{table}[!h]
+%\begin{center}
+%\begin{tabular}{ | l | l | l | l |}
+%\hline
+%\textbf{Sample}& DB30418-3 KTH & DB30418-3 NTNU \\ \hline
+%\textbf{Core Diameter $\si{\micro \meter}$}& $ 163-164.5$ & $28-40$ \\\hline
+%\textbf{Number of locations}&$3$&$2$ \\\hline
+%\textbf{Standard Deviation}& $\SI{1.75e-5}{\ohm \cm}$ & $ \SI{1.5e-5}{\ohm\cm}$ \\\hline
+%\textbf{Averaged Resistivity $\si{\ohm \cm}$}& $\SI{0.00061}{}\pm\SI{ 0.00002}{\ohm \cm}$ &$0.00072 \pm 0.0003 %$ \\\hline
+%\end{tabular}
+%\end{center}
+%\caption{The standard deviation shows. The error given is approximate, and calculated by calculating the resistivity for the largest and smallest core diameters. The contact was non-linear under one bias for DB30618-6 SH and thus only the linear half was considered. }
+%\label{Tabmb25}
+%\end{table}
+
+
+%\subsection{Discussion of Electrical Measurements}
 %The SiGe fibers showed good agreement despite the segregation of Si and Ge in the fiber. The only outlier is the fiber drawn to 7.2 um. Without EDS results or further measurements, it is not easy to guess why this would show higher resistivity as the composition at the measurement site is not known. Both coatings resulted similar values 
 
-\section{Conclusions}
-The combination of mechanical polishing of an epoxy embedded fiber for use in Maskless Lithography, is promising for characterization of Semiconductor core fibers. The planar dimensions of the sample allow for integration with the existing instruments, which are primarily designed around the use of planar silicon wafers.  Maskless lithography provides more than sufficient resolution at the microscale. It allows for the mask design to be adapted to the changing fiber dimensions without creating a new physical chromium exposure mask, or shadow mask. Further the high resolution of the instrument allows for allignment with micrometer size features on the fiber which can allow for the measurement of specific junctions written in the fiber or areas of interest, as in the graded SiGe fibers produced in the group. The highest concentration areas being only several micrometers in length. The effects of strain in the fibers needs to be addressed in order to minimize cracking effects which are an obstacle to performing hall measurements. The use of micro manipulators provides of means of achieving a high number of measurement per fiber, which can lead to greater accuracy in resistivity meaurements. So far the measurements are limited to low resistivity materials. Annealing of contacts would not only open the range to accurate measurements of higher resistivity materials, but would open the possibility of additional measurement techniques () using one ohmic and one non ohmic contact. 

@@ -1,4 +1,5 @@
-%% Master Thesis Template
+
+ %% Master Thesis Template
 %% Please update the specification through this link: https://daim.idi.ntnu.no/howto_thesis_submission.pdf
 
 \documentclass[pdftex,10pt,b5paper,twoside]{book}
@@ -8,8 +9,9 @@
 \usepackage{amsmath}
 \usepackage{subcaption}
 \usepackage{siunitx}
-\sisetup{
-  inter-unit-product=\ensuremath{{\cdot}},
+\usepackage{bm}
+\usepackage{tikz}
+\sisetup{inter-unit-product=\ensuremath{{\cdot}},
 %  tight-spacing=true,
 }
 %\sisetup{inter-unit-product =$\cdot$}
@@ -26,26 +28,121 @@
 %% PART 2
 %\input{summary.tex}		%% Optional
 %\input{preface.tex}		%% Optional
-%\input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
+\input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
 %\input{abbreviations.tex}	%% Optional
 
 %% PART 3 -- The Chapters
 %\input{chapter1.tex}		%% Edit each chapter
 %\input{overview.tex}
-\input{b_Introduction.tex}
-\input{c_theory.tex}
+%\input{b_Introduction.tex}
+%\input{c_theory.tex}
 
-\chapter{Experimental Methods}
-\import{./}{d_methods.tex}
-\import{./}{d_methods_2.tex}
-\import{./}{d_methods_3.tex}
+%\chapter{Experimental Methods}
+%\import{./}{d_methods.tex}
+%\import{./}{d_methods_2.tex}
+%\import{./}{d_methods_3.tex}
 
 \chapter{Results and Discussion}
 \import{./}{e_results_1.tex}
-\import{./}{e_results_2.tex}
+%\import{./}{e_results_2.tex}
 %\input{chapter8.tex}
 %% PART 4
 \input{references.tex}	%% Edit your references in "mylib.bib"
 %\input{appendix.tex}		%% Optional
 
 \end{document}
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/map_redcircles.png}
+  %\caption{1a}
+  \label{fig:sfig1}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/spectrum_32.png}
+  %\caption{1a}
+  \label{fig:sfig2}
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/EDS/spectrum_41.png}
+  %\caption{1b}
+  \label{fig:sfig3}
+\end{subfigure}
+\caption{SEM EDS results of as-drawn SiGe B section... fiber end.}
+\label{as-drawn eds}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418_eds_image.png}
+  %\caption{1a}
+ 
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418_eds_Si.png}
+  %\caption{1a}
+  
+\end{subfigure}% %blank line makes figures vertical
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418_eds_gepng.png}
+  %\caption{1b}
+  
+\end{subfigure}
+
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418_eds_0.png}
+  %\caption{1b}
+ 
+\end{subfigure}
+\caption{EDS results of as-drawn SiGe B fiber showing Si, Ge and oxygen content. The results are qualitate and show a correspodence between Ge content and image contrast.  Image from \cite{Balci2019FiberAnalysis}}
+\label{sige_eds_all}
+\end{figure}
+
+\begin{figure}[h]
+ %h here H requires float, exactly here, h! overide latex
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418-3_eds_si.png}
+  %\caption{1a}
+ \end{subfigure}% %blank line makes figures vertical
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{fig/Results/db30418-3_eds_ge.png}
+  %\caption{1a}
+ \end{subfigure}% %blank line makes figures vertical
+ \label{db30418_eds}
+\caption{SEM EDS composition map of SiGe B fiber core showing four-fold symmetry. The image is of the fiber end showing a cross section of the core. The core is slightly larger than the image area. Image from \cite{Balci2019FiberAnalysis}}
+\label{EDS_ENDS}
+\end{figure}
+\FloatBarrier
+\section{Laser annealed SiGe}
+L
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/EDS/linescan_annealed.png}
+    \caption{Linescans across the core of Laser annealed SiGe-B }
+    \label{laserannelad composition}
+\end{figure}
+
+\section{Conclusions}
+The combination of mechanical polishing of an epoxy embedded fiber for use in Maskless Lithography, is promising for characterization of Semiconductor core fibers. The planar dimensions of the sample allow for integration with the existing instruments, which are primarily designed around the use of planar silicon wafers.  Maskless lithography provides more than sufficient resolution at the microscale. It allows for the mask design to be adapted to the changing fiber dimensions without creating a new physical chromium exposure mask, or shadow mask. Further the high resolution of the instrument allows for allignment with micrometer size features on the fiber which can allow for the measurement of specific junctions written in the fiber or areas of interest, as in the graded SiGe fibers produced in the group. The highest concentration areas being only several micrometers in length. The effects of strain in the fibers needs to be addressed in order to minimize cracking effects which are an obstacle to performing hall measurements. The use of micro manipulators provides of means of achieving a high number of measurement per fiber, which can lead to greater accuracy in resistivity meaurements. So far the measurements are limited to low resistivity materials. Annealing of contacts would not only open the range to accurate measurements of higher resistivity materials, but would open the possibility of additional measurement techniques () using one ohmic and one non ohmic contact. 

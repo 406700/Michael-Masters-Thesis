@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'permanentresist.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{419.32517705bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.95028948)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{permanentresist.pdf}}%
+    \put(0.10328045,0.86875111){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Sputtered Film}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{permanentresist.pdf}}%
+    \put(0.07697801,0.75774871){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Permanent Resist}}}%
+    \put(0.17479094,0.61226793){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Epoxy}}}%
+    \put(0.56518707,0.66105563){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Si Core }}}%
+    \put(0.51501774,0.55905835){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Fiber Cladding }}}%
+    \put(0.25453622,0.31919348){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Permanent Resist}}}%
+    \put(0.30267814,0.18574734){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Contacts}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{permanentresist.pdf}}%
+    \put(0.63387923,0.83038373){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(-0.00253383,0.89731654){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{(a)}}}}%
+    \put(-0.00475093,0.42083273){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{(b)}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{permanentresist.pdf}}%
+  \end{picture}%
+\endgroup%
